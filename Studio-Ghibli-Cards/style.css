@@ -25,7 +25,11 @@ body{
     box-shadow: 0px 2px 18px #26395361;
     border-radius: 20px;
     width: 30%;
-    height: 110vh;
+    margin: 0 auto;
+}
+
+span{
+    height: 167px;
 }
 
 .topcard{

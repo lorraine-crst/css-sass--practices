@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+body{
+    font-family: "Poppins";
+}
+
+.titulo{
+    text-align: center;
+    font-size: 45px;
+    color: gray;
+}
+
+.card{
+    width: 30%;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container{
+    display: flex;
+}
+
+.img-container img{
+    width: 100%;
+    height: 210px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.content-container{
+    padding: 10px 20px;
+}
+
+.content-container h2{
+    font-size: 24px;
+}
+
+.content-container h3{
+    background: #39A9DB;
+    width: 80px;
+    font-size: 8px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.content-container p{
+    color: grey;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.02rem;
+    line-height: 1.3rem;
+    margin-bottom: 30px;
+    height: 146px;
+}
+
+.botao{
+    text-align: center;
+    
+}
+
+.btn{
+    background: #664EF7;
+    color: white;
+    font-size: 12px;
+    padding: 10px 20px;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn:hover{
+    background: #7C66FF;
+}

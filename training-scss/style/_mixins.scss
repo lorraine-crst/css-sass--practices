@@ -1,0 +1,19 @@
+@mixin repeat-properties{
+    margin: 1em 50px;
+    text-align: justify;
+}
+
+@mixin for-paragraph{
+    color: $color-base;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+@mixin margin-nought{
+    margin: 0;
+}
+
+@mixin fontsize-media{
+    font-size: 40px;
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import 'variables';
+@import 'mixins';
+
+body{
+    font-family: "Poppins";
+    @include margin-nought;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $background-color;
+}
+
+.container{
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 965px;
+    h1{
+        color: $color-base;
+        font-size: 100px;
+        @include margin-nought;
+    }
+    h3{
+        font-size: 40px;
+        font-weight: 300;
+        color: $color-base;
+        @include margin-nought;
+    }
+    ul{
+        list-style-type: none;
+        @include margin-nought;
+    }
+    ul#second-row{
+        margin: 40px 0;
+    }
+    li{
+        display: inline;
+    }
+    #second-row li{
+        margin: 0 20px;
+    }
+    #second-row li img{
+        vertical-align: top;
+    }
+}
+
+.texts{
+    @include repeat-properties;
+    .text1{
+        @include for-paragraph;
+    }
+    .small-text{
+        @include for-paragraph;
+    }
+}
+
+.rows{
+    .fourt-row{
+        li{
+            margin: 40px 90px;
+        }
+    }
+}
+
+.text{
+    @include repeat-properties;
+    p{
+        @include for-paragraph;
+    }
+}
+
+.finaltext{
+    margin-top: 60px;
+    p{
+        color: #FFB703;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    img{
+        cursor: pointer;
+    }
+}
+
+footer{
+    a{
+        text-decoration: none;
+        padding: 0 35px;
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .top{
+        h1{
+            font-size: 7em;
+        }
+        h3{
+            font-size: 4em;
+        }
+    }
+    .texts{
+        .text1{
+            @include fontsize-media;
+        }
+        .small-text{
+            @include fontsize-media;
+        }
+    }
+    .text{
+        p{
+            @include fontsize-media; 
+        }
+    }
+    .finaltext{
+        p{
+            @include fontsize-media;
+        }
+    }
+    footer a{
+        font-size: 35px;
+    }
+}

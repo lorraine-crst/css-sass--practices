@@ -4,7 +4,7 @@ body{
     background-color: #599dd9;
 }
 
-.text p{
+.text h1{
     font-size: 3em;
     text-align: center;
     font-weight: 600;
@@ -76,3 +76,17 @@ h2{
     padding: 10px;
 }
 
+@media only screen and (max-width: 800px){
+    .content{
+        flex-direction: column;
+        
+        width: 100%;
+    }
+    .card{
+        width: 90%;
+        margin-top: 30px;
+    }
+    .card:first-child{
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #eeeeff;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.heading{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 50px;
+    color: #414183;
+}
+
+img{
+    width: 100%;
+    height: 163px;
+    border-radius: 10px 10px 0 0;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.card{
+    height: 75vh;
+    width: 22.5%;
+    background-color: #fff;
+    border: 1px solid #acaccd;
+    transition: 0.3s;
+    border-radius: 10px;
+    .card-body {
+        padding: 20px;
+        text-align: center;
+        font-size: 1em;
+        margin: 0 auto;
+        .btn {
+            color: #fff;
+            text-align: center;
+            background: linear-gradient(to right, #414183, #acaccd);
+            text-decoration: none;
+            padding: 10px 5px;
+            border-radius: 5px;
+            
+            }
+            .card-text{
+                height: 225px;
+            }
+    }
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 40px -10px #1c41618c;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    .heading {
+      padding: 20px;
+      font-size: 1.4em;
+      margin: 0;
+    }
+  
+    .card-text{
+        height: 100px;
+    }
+
+    .card {
+      width: 90%;
+      height: 75vh;
+      margin-top: 50px;
+    }
+
+  }
+
+  @media screen and (max-width: 320px){
+    .container {
+        width: 95%;
+    }
+
+    .card .card-body .card-text{
+        height: 219px;
+    }
+
+    .card {
+        width: 90%;
+        height: 80vh;
+        margin-top: 50px;
+      }
+
+  }
+
+  @media screen and (max-width: 800px){
+    .container {
+        width: 70%;
+        margin: 0 auto;
+      }
+    
+      .card .card-body .card-text{
+          height: 296px;
+      }
+  
+      .card {
+        width: 48%;
+        height: 85vh;
+        margin-top: 50px;
+      }
+  }
+
+

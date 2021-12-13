@@ -1,12 +1,37 @@
-body{
-    background: url('../img/plain-FAFAFA\ \(1\).svg');
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/segoe-ui.ttf');
+    font-style: normal;
+    font-weight: 400;
 }
 
-*{
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/segoe-ui-bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/segoe-ui-semibold.ttf');
+    font-style: normal;
+    font-weight: 600;
+}
+
+body{
+    background: url('../img/plain-FAFAFA.svg');
+}
+
+*,
+*::after,
+*::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .container{
@@ -16,16 +41,22 @@ body{
     align-items: center;
     align-content: center;
     margin-top: 50px;
+    flex-direction: column;
+
     .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: #fff;
-        border: solid #dbdbdb 1px;
-        height: 50vh;
+        border: 1px solid #dbdbdb;
         max-width: 360px;
         width: 100%;
+        padding: 30px;
     }
+
     .heading img{
-        width: 180px;
-        margin: 22px auto 12px;
+        width: 175px;
     }
 }
 
@@ -34,11 +65,14 @@ body{
         color: #8e8e8e;
         font-size: 17px;
         line-height: 20px;
-        margin: 0 45px 10px;
+        margin: 10px 45px;
         font-weight: 600;
     }
 
-    button{
+    .bnt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #0095f6;
         color: #fff;
         font-size: 13px;
@@ -46,39 +80,117 @@ body{
         border: 1px solid transparent;
         padding: 6px 47px;
         border-radius: 4px;
-        margin-top: 10px;
-    }
+        margin: 10px auto 0;
 
-    .alternative{
-        margin-top: 1rem;
+        img{
+            width: 15px;
+            filter: invert(99%) sepia(0%) saturate(1940%) hue-rotate(64deg) brightness(120%) contrast(100%);
+            margin-right: 8px;
+        }
     }
-    
-    .alternative span{
+}
+
+.alternative{
+    margin-top: 1rem;
+
+    span{
         font-size: 13px;
         font-weight: 600;
         color: #8e8e8e;
         position: relative;
         margin: 0 18px;
+
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 112px;
+            background: #dbdbdb;
+            bottom: 50%;
+            right: 33px;
+        }
+
+        &::after{
+            left: 33px;
+        }
     }
-    
-    .alternative span::before,
-    .alternative span::after{
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 100px;
-        background: #dbdbdb;
-        bottom: 50%;
-        right: 33px;
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input{
+        width: 258px;
+        height: 36px;
+        background-color: #fafafa;
+        border: 1px solid #dbdbdb;
+        font-size: 12px;
+        padding: 9px 0 7px 8px;
+        margin-top: 7px;
+        border-radius: 3px;
+        outline: none;
+
+        &::placeholder{
+            color: #8e8e8e;
+        }
     }
-    
-    .alternative span::after{
-         left: 33px;
+    .button{
+        background-color: #0095f6;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        border: 1px solid transparent;
+        padding: 6px 93px;
+        border-radius: 4px;
+        margin-top: 16px;
     }
 
-    img{
-        width: 15px;
-        filter: invert(99%) sepia(0%) saturate(1940%) hue-rotate(64deg) brightness(120%) contrast(100%);
-        margin-right: 5px;
+    .paragraph{
+        color: #8e8e8e;
+        font-size: 12px;
+        margin: 13px 20px;
+        .terms{
+            text-decoration: none;
+            color: #8e8e8e;
+            font-weight: 600;
+        }
+    }
+}
+
+.create-account{
+    margin: 20px 0;
+    .mini-card{
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        width: 100%;
+        padding: 25px 94px;
+        p{
+            color: #262626;
+            font-size: 14px;
+           .conectar{
+               color: #0095f6;
+               text-decoration: none;
+           }
+        }
+    }
+}
+
+.donwload{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    .apps{
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px 0;
+        p{
+            color: #262626;
+            font-size: 14px;
+            margin: 2px 0;     
+        }
     }
 }

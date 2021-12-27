@@ -37,19 +37,15 @@ body{
 }
 
 .container{
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        margin-top: 50px;
-        flex-direction: column;
+    @include flex-properties;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+    margin-top: 50px;
 
     .card{
-        display: flex;
+        @include flex-properties;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         background-color: #fff;
         border: 1px solid #dbdbdb;
         max-width: 360px;
@@ -78,9 +74,7 @@ body{
     }
 
     .content__bnt{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-properties;
         background-color: #0095f6;
         color: #fff;
         font-size: 13px;
@@ -93,32 +87,33 @@ body{
     }
 }
 
-    .alternative{
-        margin-top: 1rem;
+.alternative{
+    margin-top: 1rem;
     
-        span{
-            font-size: 13px;
-            font-weight: 600;
-            color: #8e8e8e;
-            position: relative;
-            margin: 0 18px;
+    span{
+        font-size: 13px;
+        font-weight: 600;
+        color: #8e8e8e;
+        position: relative;
+        margin: 0 18px;
     
-            &::before,
-            &::after{
-                content: '';
-                position: absolute;
-                height: 1px;
-                width: 112px;
-                background: #dbdbdb;
-                bottom: 50%;
-                right: 33px;
-            }
-    
-            &::after{
-                left: 33px;
-            }
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 112px;
+            background: #dbdbdb;
+            bottom: 50%;
+            right: 33px;
         }
     }
+    
+    &::after{
+        left: 33px;
+    }
+    
+}
 
 
 
@@ -193,12 +188,12 @@ body{
         flex-direction: row;
         justify-content: center;
         margin: 10px 0;
-        
         p{
             color: #262626;
             font-size: 14px;
             margin: 2px 0;     
-        }
+        } 
     }
 }
+
 
